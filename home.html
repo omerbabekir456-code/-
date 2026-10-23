@@ -1,48 +1,21 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الصحابيات</title>
-<style>
-body{
-<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>اتصل بنا - رياحين الجنة</title>
+<title>الرئيسية - رياحين الجنة</title>
 <style>
 body{background:#fff8f0; font-family:tahoma; margin:0; padding:0; display:flex; flex-direction:column; align-items:center; min-height:100vh;}
 .main-box{background:white; border:2px solid #c27ba0; border-radius:20px; padding:25px; width:95%; max-width:500px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; margin-top:20px;}
 nav{font-size:16px; margin-bottom:15px;} nav a{color:#8b2252; text-decoration:none; margin:0 5px;}
-h1{color:#8b2252; font-size:26px;} label{font-size:17px; color:#444; display:block; text-align:right; margin:15px 5px 5px 0;}
-input, textarea{width:100%; font-size:17px; border:1.5px solid #d9a2c0; border-radius:10px; padding:10px 12px; box-sizing:border-box; outline:none;}
-input{height:48px;} button{width:100%; height:50px; font-size:20px; background:#c27ba0; color:white; border:none; border-radius:12px; margin-top:15px;}
-footer{font-size:13px; color:#888;} hr{border:none; border-top:1px solid #f0d0e0; margin:15px 0;}
-
-* { box-sizing: border-box; }
-img { max-width: 100%; height: auto; }
-
-@media (max-width: 600px){
-  h1{font-size: 22px !important;}
-  nav{font-size: 13px !important;}
-  input, textarea, button{font-size: 16px !important;}
-  .main-box, .login-box{padding: 15px !important;}
-}
-@media (min-width: 601px) and (max-width: 900px){
-  .main-box, .login-box{max-width: 600px !important;}
-}
-@media (min-width: 901px){
-  .main-box, .login-box{max-width: 700px !important;}
-}
+h1{color:#8b2252; font-size:26px;}
+#welcome{color:#c27ba0; font-size:22px;}
+button{width:100%; height:50px; font-size:20px; background:#c27ba0; color:white; border:none; border-radius:12px; margin-top:15px;}
 </style>
 </head>
-<body dir="rtl">
+<body>
 
-<div style="background:#8b2252; color:white; padding:15px; text-align:center; font-size:26px; font-weight:bold; width:100%;">
-🌸 رياحين الجنة 🌸
-</div>
+<div style="background:#8b2252; color:white; padding:15px; text-align:center; font-size:26px; font-weight:bold; width:100%;">🌸 رياحين الجنة 🌸</div>
 
 <div class="main-box">
 <nav>
@@ -51,54 +24,31 @@ img { max-width: 100%; height: auto; }
 <a href="sahabyat.html">الصحابيات</a> |
 <a href="askus.html">اتصل بنا</a>
 </nav>
-<hr>
 
+<h2 id="welcome"></h2>
 
-</body>
-</html>
-</style>
-</head>
-<body>
+<h1>أهلاً بيك في رياحين الجنة 🌸</h1>
+<p>موقع للبنات المسلمات، قدوة وصحبة صالحة</p>
 
-<div class="main-box">
-
-<h1>الصحابيات رضي الله عنهن</h1>
-<p style="text-align:center; color:#888;">قدوة لكل مسلمة</p>
-
-<button onclick="document.getElementById('more').style.display='block'">
-اعرفي المزيد عن الصحابيات
-</button>
-
-<div id="more" style="display:none;">
-
-<h2>السيدة خديجة بنت خويلد</h2>
-<p>أول زوجات النبي صلى الله عليه وسلم، أول من آمنت، أنفقت مالها في سبيل الدعوة، بشرها الله ببيت في الجنة من قصب لا صخب فيه ولا نصب. توفيت في عام الحزن.</p>
-
-<h2>السيدة عائشة بنت أبي بكر</h2>
-<p>حبيبة رسول الله، أعلم نساء الأمة، روت 2210 حديث، نزلت براءتها في سورة النور، كان الوحي ينزل في بيتها.</p>
-
-<h2>السيدة فاطمة الزهراء</h2>
-<p>بنت النبي محمد صلى الله عليه وسلم، سيدة نساء أهل الجنة، زوجة علي بن أبي طالب، أم الحسن والحسين، كانت صابرة عابدة زاهدة.</p>
-
-<h2>السيدة حفصة بنت عمر</h2>
-<p>صوامة قوامة، حفظت أول مصحف جمع في الإسلام عندها، تزوجها النبي بعد استشهاد زوجها في بدر.</p>
-
-<h2>السيدة زينب بنت جحش</h2>
-<p>بنت عمة النبي، زوجها الله للنبي من فوق سبع سماوات، كانت كثيرة الصدقة والعمل بيدها، أول زوجات النبي لحوقا به بعد وفاته.</p>
-
-<button class="btn-hide" onclick="document.getElementById('more').style.display='none'">
-إخفاء
-</button>
-
+<button onclick="window.location.href='sahabyat.html'">شوفي الصحابيات</button>
+<button onclick="window.location.href='askus.html'">اتصل بنا</button>
 </div>
 
-</div>
 <script>
+let name = localStorage.getItem('userName');
+
+if(name){
+  document.getElementById('welcome').innerText = 'أهلاً بيك يا ' + name + ' 🌸';
+} else {
+  document.getElementById('welcome').innerText = 'أهلاً بيك 🌸';
+}
+
 function logout(){
   localStorage.removeItem('userName');
   alert('تم تسجيل خروجك 🌸');
   window.location.href = 'index.html';
 }
 </script>
+
 </body>
 </html>
