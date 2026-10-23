@@ -5,107 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الصحابيات - رياحين الجنة</title>
 <style>
-body{
-background:#fff8f0;
-font-family:tahoma;
-display:flex;
-justify-content:center;
-align-items:flex-start;
-min-height:100vh;
-margin:0;
-padding:15px;
-}
-.main-box{
-background:white;
-border:2px solid #c27ba0;
-border-radius:20px;
-padding:25px;
-width:95%;
-max-width:600px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-margin-top:20px;
-}
-nav{font-size:16px; margin-bottom:15px;}
-nav a{color:#8b2252; text-decoration:none; margin:0 5px;}
-nav a:hover{text-decoration:underline;}
-h1{color:#8b2252; font-size:26px; margin:10px 0;}
-h2{color:#a64d79; font-size:19px; margin:20px 0 5px 0; text-align:right; border-right:4px solid #c27ba0; padding-right:8px;}
-p{text-align:right; line-height:1.8; color:#444; font-size:16px; margin:5px 0 10px 0;}
-hr{border:none; border-top:1px solid #f0d0e0; margin:15px 0;}
-footer{font-size:13px; color:#888; margin-top:15px; line-height:1.6; text-align:center;}
-.card{background:#fff8f0; border-radius:12px; padding:12px 15px; margin:10px 0;}
-/* التوافق مع كل الشاشات */
-* { box-sizing: border-box; }
-img { max-width: 100%; height: auto; }
-
-@media (max-width: 600px){
-  h1{font-size: 22px !important;}
-  nav{font-size: 13px !important;}
-  input, textarea, button{font-size: 16px !important;}
-  .main-box, .login-box{padding: 15px !important;}
-}
-@media (min-width: 601px) and (max-width: 900px){
-  .main-box, .login-box{max-width: 600px !important;}
-}
-@media (min-width: 901px){
-  .main-box, .login-box{max-width: 700px !important;}
-}
+body{background:#fff8f0; font-family:tahoma; margin:0; padding:0; display:flex; flex-direction:column; align-items:center; min-height:100vh;}
+.main-box{background:white; border:2px solid #c27ba0; border-radius:20px; padding:25px; width:95%; max-width:500px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; margin-top:20px;}
+nav{font-size:16px; margin-bottom:15px;} nav a{color:#8b2252; text-decoration:none; margin:0 5px;}
+h1{color:#8b2252; font-size:26px;}
+h2{color:#8b2252; font-size:20px; margin-top:20px;}
+p{color:#444; line-height:1.8; text-align:right;}
+button{width:100%; height:50px; font-size:20px; background:#c27ba0; color:white; border:none; border-radius:12px; margin-top:15px;}
 </style>
 </head>
-<body dir="rtl">
+<body>
+
+<div style="background:#8b2252; color:white; padding:15px; text-align:center; font-size:26px; font-weight:bold; width:100%;">🌸 رياحين الجنة 🌸</div>
 
 <div class="main-box">
-
 <nav>
 <a href="#" onclick="logout()">تسجيل خروج</a> |
 <a href="home.html">الرئيسية</a> |
 <a href="sahabyat.html">الصحابيات</a> |
 <a href="askus.html">اتصل بنا</a>
 </nav>
-<hr>
 
-<h1>الصحابيات الجليلات</h1>
+<h1>الصحابيات رضي الله عنهن</h1>
+<p style="text-align:center; color:#888;">قدوة لكل مسلمة</p>
 
-<div class="card">
-<h2>1- السيدة خديجة بنت خويلد</h2>
-<p>أول زوجات النبي محمد ﷺ، وأول من آمن به وصدّقه وسانده.</p>
+<button onclick="showMore()">اعرفي المزيد عن الصحابيات</button>
+
+<div id="more" style="display:none;">
+<h2>السيدة خديجة بنت خويلد</h2>
+<p>أول زوجات النبي صلى الله عليه وسلم، أول من آمنت، أنفقت مالها في سبيل الدعوة، بشرها الله ببيت في الجنة من قصب لا صخب فيه ولا نصب.</p>
+
+<h2>السيدة عائشة بنت أبي بكر</h2>
+<p>حبيبة رسول الله، أعلم نساء الأمة، روت 2210 حديث، نزلت براءتها في سورة النور.</p>
+
+<h2>السيدة فاطمة الزهراء</h2>
+<p>بنت النبي محمد صلى الله عليه وسلم، سيدة نساء أهل الجنة، زوجة علي بن أبي طالب، أم الحسن والحسين.</p>
+
+<h2>السيدة حفصة بنت عمر</h2>
+<p>صوامة قوامة، حفظت أول مصحف جمع في الإسلام عندها.</p>
+
+<h2>السيدة زينب بنت جحش</h2>
+<p>زوجها الله للنبي من فوق سبع سماوات، كانت كثيرة الصدقة والعمل بيدها.</p>
+
+<button onclick="hideMore()">إخفاء</button>
+</div>
 </div>
 
-<div class="card">
-<h2>2- السيدة عائشة بنت أبي بكر</h2>
-<p>أم المؤمنين، ومن أكثر النساء رواية للحديث النبوي، واشتهرت بعلمها وفقهها.</p>
-</div>
-
-<div class="card">
-<h2>3- السيدة فاطمة الزهراء</h2>
-<p>ابنة النبي محمد ﷺ، ومن سيدات نساء أهل الجنة.</p>
-</div>
-
-<div class="card">
-<h2>4- السيدة حفصة بنت عمر</h2>
-<p>أم المؤمنين، وحُفظت لديها الصحف التي جُمع فيها القرآن الكريم في عهد أبي بكر الصديق، ثم انتقلت إلى عثمان بن عفان رضي الله عنهما.</p>
-</div>
-
-<div class="card">
-<h2>5- السيدة زينب بنت جحش</h2>
-<p>أم المؤمنين وابنة عمة النبي محمد ﷺ، واشتهرت بكثرة الصدقة والعطاء.</p>
-</div>
-
-<hr>
-
-<footer>
-<p>رياحين الجنة - موقع يهتم بسيرة الصحابيات رضي الله عنهن</p>
-<p>جميع الحقوق محفوظة &copy; 2026</p>
-</footer>
-
-</div>
 <script>
+function showMore(){
+  document.getElementById('more').style.display = 'block';
+}
+
+function hideMore(){
+  document.getElementById('more').style.display = 'none';
+}
+
 function logout(){
   localStorage.removeItem('userName');
   alert('تم تسجيل خروجك 🌸');
   window.location.href = 'index.html';
 }
 </script>
+
 </body>
 </html>
