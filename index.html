@@ -3,93 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تسجيل الدخول</title>
+<title>تسجيل الدخول - رياحين الجنة</title>
 <style>
-body{
-background:#fff8f0;
-font-family:tahoma;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-margin:0;
-}
-.login-box{
-background:white;
-border:2px solid #c27ba0;
-border-radius:20px;
-padding:25px;
-width:90%;
-max-width:380px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-}
-h1{color:#8b2252; margin-bottom:20px;}
-label{font-size:18px; color:#444; display:block; text-align:right; margin:10px 5px 5px 0;}
-input{
-width:100%;
-height:48px;
-font-size:18px;
-border:1.5px solid #d9a2c0;
-border-radius:10px;
-padding:0 12px;
-box-sizing:border-box;
-outline:none;
-}
-input:focus{border-color:#8b2252;}
-button{
-width:100%;
-height:50px;
-font-size:22px;
-background:#c27ba0;
-color:white;
-border:none;
-border-radius:12px;
-margin-top:20px;
-cursor:pointer;
-}
-button:hover{background:#a64d79;}
-a{text-decoration:none;}
-.small{font-size:14px; color:#888; margin-top:15px;}
-/* التوافق مع كل الشاشات */
-* { box-sizing: border-box; }
-img { max-width: 100%; height: auto; }
-
-@media (max-width: 600px){
-  h1{font-size: 22px !important;}
-  nav{font-size: 13px !important;}
-  input, textarea, button{font-size: 16px !important;}
-  .main-box, .login-box{padding: 15px !important;}
-}
-@media (min-width: 601px) and (max-width: 900px){
-  .main-box, .login-box{max-width: 600px !important;}
-}
-@media (min-width: 901px){
-  .main-box, .login-box{max-width: 700px !important;}
-}
+body{background:#fff8f0; font-family:tahoma; margin:0; padding:0; display:flex; flex-direction:column; align-items:center; min-height:100vh;}
+.main-box{background:white; border:2px solid #c27ba0; border-radius:20px; padding:25px; width:95%; max-width:500px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; margin-top:30px;}
+h1{color:#8b2252; font-size:26px;}
+label{display:block; text-align:right; margin:15px 5px 5px 0; color:#444;}
+input{width:100%; height:48px; font-size:17px; border:1.5px solid #d9a2c0; border-radius:10px; padding:10px; box-sizing:border-box;}
+button{width:100%; height:50px; font-size:20px; background:#c27ba0; color:white; border:none; border-radius:12px; margin-top:20px;}
 </style>
 </head>
-<body dir="rtl">
+<body>
 
-<div class="login-box">
+<div style="background:#8b2252; color:white; padding:15px; text-align:center; font-size:26px; font-weight:bold; width:100%;">🌸 رياحين الجنة 🌸</div>
+
+<div class="main-box">
 <h1>تسجيل الدخول</h1>
+<p style="color:#888;">أهلاً بيك في رياحين الجنة</p>
 
-<form action="./home.html" method="get">
+<label>اسمك:</label>
+<input type="text" id="userName" placeholder="اكتبي اسمك هنا">
 
-<label>الاسم:</label>
-<input type="text" name="username" placeholder="أدخل الاسم" required>
+<label>كلمة السر:</label>
+<input type="password" id="password" placeholder="اكتبي كلمة السر">
 
-<label>كلمة المرور:</label>
-<input type="password" name="password" placeholder="أدخل كلمة المرور" required minlength="4">
-
-<a href="home.html">
-<button type="button">دخول</button>
-</a>
-
-<p class="small">موقع الصحابيات رضي الله عنهن</p>
-
-</form>
+<button onclick="login()">دخول</button>
 </div>
+
+<script>
+function login(){
+  let name = document.getElementById('userName').value;
+  let pass = document.getElementById('password').value;
+
+  if(name == "" || pass == ""){
+    alert("اكتبي اسمك وكلمة السر أول 🌸");
+    return;
+  }
+
+  localStorage.setItem('userName', name);
+  alert("أهلاً بيك يا " + name + " 🌸");
+  window.location.href = 'home.html';
+}
+</script>
 
 </body>
 </html>
