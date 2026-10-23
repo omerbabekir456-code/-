@@ -20,6 +20,22 @@ h1{color:#8b2252; font-size:26px;} label{font-size:17px; color:#444; display:blo
 input, textarea{width:100%; font-size:17px; border:1.5px solid #d9a2c0; border-radius:10px; padding:10px 12px; box-sizing:border-box; outline:none;}
 input{height:48px;} button{width:100%; height:50px; font-size:20px; background:#c27ba0; color:white; border:none; border-radius:12px; margin-top:15px;}
 footer{font-size:13px; color:#888;} hr{border:none; border-top:1px solid #f0d0e0; margin:15px 0;}
+
+* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+@media (max-width: 600px){
+  h1{font-size: 22px !important;}
+  nav{font-size: 13px !important;}
+  input, textarea, button{font-size: 16px !important;}
+  .main-box, .login-box{padding: 15px !important;}
+}
+@media (min-width: 601px) and (max-width: 900px){
+  .main-box, .login-box{max-width: 600px !important;}
+}
+@media (min-width: 901px){
+  .main-box, .login-box{max-width: 700px !important;}
+}
 </style>
 </head>
 <body dir="rtl">
@@ -30,7 +46,7 @@ footer{font-size:13px; color:#888;} hr{border:none; border-top:1px solid #f0d0e0
 
 <div class="main-box">
 <nav>
-<a href="index.html">تسجيل الدخول</a> |
+<a href="#" onclick="logout()">تسجيل خروج</a> |
 <a href="home.html">الرئيسية</a> |
 <a href="sahabyat.html">الصحابيات</a> |
 <a href="askus.html">اتصل بنا</a>
@@ -77,6 +93,12 @@ footer{font-size:13px; color:#888;} hr{border:none; border-top:1px solid #f0d0e0
 </div>
 
 </div>
-
+<script>
+function logout(){
+  localStorage.removeItem('userName');
+  alert('تم تسجيل خروجك 🌸');
+  window.location.href = 'index.html';
+}
+</script>
 </body>
 </html>
